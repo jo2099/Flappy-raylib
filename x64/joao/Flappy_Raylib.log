@@ -1,0 +1,5 @@
+﻿  obstaculo.c
+C:\Users\fleck\Desktop\codigos genericos\Flappy_Raylib\Flappy_Raylib\obstaculo.c(14,36): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+C:\Users\fleck\Desktop\codigos genericos\Flappy_Raylib\Flappy_Raylib\obstaculo.c(19,33): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+C:\Users\fleck\Desktop\codigos genericos\Flappy_Raylib\Flappy_Raylib\obstaculo.c(23,55): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+  Flappy_Raylib.vcxproj -> C:\Users\fleck\Desktop\codigos genericos\Flappy_Raylib\Flappy_Raylib\x64\joao\Flappy_Raylib.exe
