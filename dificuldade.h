@@ -1,7 +1,13 @@
-#pragma once
+#ifndef DIFICULDADE_H
+#define DIFUCLDADE_H
 
+#pragma once
+#include"raylib.h"
+#include"obstaculo.h"
 #define DISTANCIA_OBSTACULOS 400
-typedef struct dificuldade {
+#define MAX_OBSTACULOS 30
+
+struct dificuldade {
 	int score_treshold;
 	int nivel_atual;
 	int gap;
@@ -13,8 +19,14 @@ typedef struct dificuldade {
 
 	int num_atual_obstaculos;
 	int altura_anterior;
-}DIFICULDADE;
+};
 
-void define_diff(DIFICULDADE* dificuldade, char nome_arq[20]);
+void define_diff(struct dificuldade* dificuldade, char nome_arq[20]);
 
-void atualiza_diff(DIFICULDADE* diff, int score);
+void atualiza_diff(struct dificuldade* diff, int score, struct obstaculo obs[MAX_OBSTACULOS] );
+
+
+
+#endif // !DIFICULDADE_H
+
+

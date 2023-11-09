@@ -9,25 +9,28 @@
 int	main()
 {
 	int inicio = 0;
-	OBSTACULO obstaculos[MAX_OBSTACULOS];
+	struct obstaculo obstaculos[MAX_OBSTACULOS];
 	char pontos[20];
-	DIFICULDADE dificuldade_atual;
+	struct dificuldade dificuldade_atual;
 	char arquivo[20] = "dificuldade.txt";
 	JOGADOR jogador;
 
 
-	inicializa_jogador(&jogador);
+	
 
-	define_diff(&dificuldade_atual,arquivo);
-	//inicializa os obstaculos separados por uma distancia de 100 pixels
-	posiciona_obstaculos(obstaculos,&dificuldade_atual);
-	printf("\nteste\n");
 
 	
+	printf("\nteste\n");
+
+
 	system("pause");
 
 	//tela basica raylib
 	InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Hello World");
+	inicializa_jogador(&jogador);
+	define_diff(&dificuldade_atual, arquivo);
+	//inicializa os obstaculos separados por uma distancia de 100 pixels
+	posiciona_obstaculos(obstaculos, &dificuldade_atual);
 	SetTargetFPS(60);
 
 	//loop do jogo
@@ -40,7 +43,7 @@ int	main()
 		{
 
 			move_jogador(&jogador);
-			atualiza_diff(&dificuldade_atual, jogador.score,obstaculos);
+			atualiza_diff(&dificuldade_atual, jogador.score, obstaculos);
 			jogador.score++;
 
 			for (int i = 0;i < dificuldade_atual.num_atual_obstaculos;i++)
@@ -52,11 +55,11 @@ int	main()
 					inicializa_jogador(&jogador);
 					inicio = 0;
 					define_diff(&dificuldade_atual, arquivo);
-					posiciona_obstaculos(obstaculos,&dificuldade_atual);
+					posiciona_obstaculos(obstaculos, &dificuldade_atual);
 					WaitTime(1);
 				}
 				if (obstaculos[i].hitboxbaixo.x + obstaculos[i].hitboxbaixo.width < 0) //verifica se o obstaculo saiu da tela e o reposiciona na direita
-					inicializa_obstaculo(&obstaculos[i],&dificuldade_atual);
+					inicializa_obstaculo(&obstaculos[i], &dificuldade_atual);
 
 			}
 		}
@@ -74,7 +77,7 @@ int	main()
 
 		EndDrawing();
 
-	}	
+	}
 
 	return 0;
 }

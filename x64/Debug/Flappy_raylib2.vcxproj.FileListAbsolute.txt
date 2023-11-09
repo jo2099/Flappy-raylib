@@ -1,0 +1,3 @@
+C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\x64\Debug\Flappy_raylib2.vcxproj.CopyComplete
+C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\x64\Debug\Flappy_raylib2.exe
+C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\x64\Debug\raylib.dll

@@ -8,18 +8,18 @@
 //obstaculo atual-referencia <= 200
 //obstaculo atual<= 200+referencia
 
-void inicializa_obstaculo(OBSTACULO* obstaculo,DIFICULDADE* diff_atual)
+void inicializa_obstaculo(struct obstaculo* obstaculo, struct dificuldade* diff_atual)
 {
-	
+
 	obstaculo->velocidade = diff_atual->vel_obstaculos;
 	obstaculo->hitboxcima.x = SCREEN_WIDTH;
 	obstaculo->hitboxcima.y = 0;
 	obstaculo->hitboxcima.width = HITBOX_WIDTH;
 	//randomiza a altura do obstaculo de cima
-	obstaculo->hitboxcima.height = GetRandomValue(0, diff_atual->dif_max_altura + (diff_atual->altura_anterior) );
-	printf("\naltura atual: %f\ndiferenca: %f", obstaculo->hitboxcima.height, obstaculo->hitboxcima.height-diff_atual->altura_anterior);
+	obstaculo->hitboxcima.height = GetRandomValue(0, diff_atual->dif_max_altura + (diff_atual->altura_anterior));
+	printf("\naltura atual: %f\ndiferenca: %f", obstaculo->hitboxcima.height, obstaculo->hitboxcima.height - diff_atual->altura_anterior);
 	if (obstaculo->hitboxcima.height < 0) { obstaculo->hitboxcima.height = 0; printf("erro\n");system("pause"); }
-		
+
 	(diff_atual->altura_anterior) = obstaculo->hitboxcima.height;
 	obstaculo->hitboxbaixo.x = obstaculo->hitboxcima.x;
 	obstaculo->hitboxbaixo.y = obstaculo->hitboxcima.height + diff_atual->gap;
@@ -32,35 +32,35 @@ void inicializa_obstaculo(OBSTACULO* obstaculo,DIFICULDADE* diff_atual)
 
 
 
-void posiciona_obstaculos(OBSTACULO obstaculos[MAX_OBSTACULOS], DIFICULDADE* diff_atual)
+void posiciona_obstaculos(struct obstaculo obstaculos[MAX_OBSTACULOS], struct dificuldade* diff_atual)
 {
 	diff_atual->num_atual_obstaculos = SCREEN_WIDTH / DISTANCIA_OBSTACULOS;
-	diff_atual->altura_anterior = SCREEN_HEIGHT/2;
+	diff_atual->altura_anterior = SCREEN_HEIGHT / 2;
 	for (int i = 0;i < diff_atual->num_atual_obstaculos;i++)
 	{
-		inicializa_obstaculo(&obstaculos[i],diff_atual);
+		inicializa_obstaculo(&obstaculos[i], diff_atual);
 
 		obstaculos[i].hitboxbaixo.x += DISTANCIA_OBSTACULOS * i;
 		obstaculos[i].hitboxcima.x += DISTANCIA_OBSTACULOS * i;
 	}
-		printf("\nteste2\n");
+	printf("\nteste2\n");
 
 }
 
-void desenha_obstaculo(OBSTACULO* obstaculo)
+void desenha_obstaculo(struct obstaculo* obstaculo)
 {
 	DrawRectangleRec(obstaculo->hitboxcima, GREEN);
 	DrawRectangleRec(obstaculo->hitboxbaixo, GREEN);
 }
 
-void move_obstaculo(OBSTACULO* obstaculo)
+void move_obstaculo(struct obstaculo* obstaculo)
 {
 
 	obstaculo->hitboxcima.x -= obstaculo->velocidade;
 	obstaculo->hitboxbaixo.x -= obstaculo->velocidade;
 }
 
-void printa_obstaculos(OBSTACULO* obstaculos,DIFICULDADE* diff_atual)
+void printa_obstaculos(struct obstaculo* obstaculos, struct dificuldade* diff_atual)
 {
 	for (int i = 0;i < diff_atual->num_atual_obstaculos;i++)
 	{

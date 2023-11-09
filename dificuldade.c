@@ -4,14 +4,14 @@
 #include"obstaculo.h"
 
 
-void define_diff(DIFICULDADE* diff, char string[20])
+void define_diff(struct dificuldade* diff, char string[20])
 {
 	//le arquivo com nome string e define os valores de diff
 	FILE* arq;
-	
+
 	arq = fopen(string, "r");
 
-if (arq == NULL)
+	if (arq == NULL)
 	{
 		printf("Erro ao abrir arquivo\n");
 		exit(1);
@@ -39,9 +39,9 @@ if (arq == NULL)
 
 }
 
-void atualiza_diff(DIFICULDADE* diff, int score,OBSTACULO obstaculos[MAX_OBSTACULOS])
+void atualiza_diff(struct dificuldade* diff, int score, struct obstaculo obstaculos[MAX_OBSTACULOS])
 {
-	if(score > (diff->score_treshold) * (diff->nivel_atual))
+	if (score > (diff->score_treshold) * (diff->nivel_atual))
 	{
 		(diff->nivel_atual)++;
 		printf("\nnivel atual: %d\n", diff->nivel_atual);
