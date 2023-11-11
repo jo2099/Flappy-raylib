@@ -11,9 +11,7 @@ void inicializa_jogador(JOGADOR* jogador)
 {
 	jogador->x = 100;
 	jogador->y = 100;
-	jogador->vidas = 3;
 	jogador->score = 0;
-	jogador->invencibilidade = 0;
 	jogador->hitbox.x = jogador->x;
 	jogador->hitbox.y = jogador->y;
 	jogador->hitbox.width = 25;
@@ -22,7 +20,7 @@ void inicializa_jogador(JOGADOR* jogador)
 	jogador->aceleracao = 0;
 
 	Image image=LoadImage("./flappy.png");
-	ImageResize(&image, jogador->hitbox.width+12, jogador->hitbox.height+12);
+	ImageResize(&image, jogador->hitbox.width+15, jogador->hitbox.height+15);
 
 	if(image.data==NULL)
 	{

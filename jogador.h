@@ -11,10 +11,9 @@
 
 typedef struct Jogador
 {
+	char nome[20];
 	float x; //posicao x do jogador na tela
 	float y; //posicao y do jogador na tela
-	int vidas; //numero de vidas do jogador
-	int invencibilidade; //flag que indica se o jogador esta invencivel
 	Rectangle hitbox; //hitbox do jogador
 	float velocidade; //velocidade do jogador
 	float aceleracao; //aceleracao do jogador

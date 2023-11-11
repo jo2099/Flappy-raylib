@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<raylib.h>
@@ -15,18 +14,8 @@ int	main()
 	char arquivo[20] = "dificuldade.txt";
 	JOGADOR jogador;
 
-
-	
-
-
-	
-	printf("\nteste\n");
-
-
-	system("pause");
-
 	//tela basica raylib
-	InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Hello World");
+	InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "FlappyINF");
 	inicializa_jogador(&jogador);
 	define_diff(&dificuldade_atual, arquivo);
 	//inicializa os obstaculos separados por uma distancia de 100 pixels
@@ -41,7 +30,6 @@ int	main()
 			inicio = 1;
 		if (inicio == 1)
 		{
-
 			move_jogador(&jogador);
 			atualiza_diff(&dificuldade_atual, jogador.score, obstaculos);
 			jogador.score++;
@@ -51,7 +39,6 @@ int	main()
 				move_obstaculo(&obstaculos[i]);
 				if (CheckCollisionRecs(jogador.hitbox, obstaculos[i].hitboxbaixo) || CheckCollisionRecs(jogador.hitbox, obstaculos[i].hitboxcima))
 				{
-					jogador.vidas--;
 					inicializa_jogador(&jogador);
 					inicio = 0;
 					define_diff(&dificuldade_atual, arquivo);
@@ -60,11 +47,8 @@ int	main()
 				}
 				if (obstaculos[i].hitboxbaixo.x + obstaculos[i].hitboxbaixo.width < 0) //verifica se o obstaculo saiu da tela e o reposiciona na direita
 					inicializa_obstaculo(&obstaculos[i], &dificuldade_atual);
-
 			}
 		}
-
-
 		//desenha o jogo
 		BeginDrawing();
 		ClearBackground(SKYBLUE);
@@ -73,8 +57,11 @@ int	main()
 			desenha_obstaculo(&obstaculos[i]);
 
 		_itoa_s(jogador.score, pontos, 20, 10);
-		DrawText("score:", (SCREEN_WIDTH / 2) - 100, SCREEN_HEIGHT / 2, 20, RED);DrawText(pontos, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 20, RED);
-
+		if (!inicio)
+		{
+			DrawText("Pressione espaco para comecar", SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2, 20, RED);	
+		}
+		DrawText("score:", 20, 20, 20, RED);DrawText(pontos, 100, 20, 20, RED);
 		EndDrawing();
 
 	}

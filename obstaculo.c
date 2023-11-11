@@ -4,7 +4,7 @@
 #include<time.h>
 #include "obstaculo.h"
 #include "dificuldade.h"
-
+#include<math.h>
 //obstaculo atual-referencia <= 200
 //obstaculo atual<= 200+referencia
 
@@ -16,8 +16,9 @@ void inicializa_obstaculo(struct obstaculo* obstaculo, struct dificuldade* diff_
 	obstaculo->hitboxcima.y = 0;
 	obstaculo->hitboxcima.width = HITBOX_WIDTH;
 	//randomiza a altura do obstaculo de cima
-	obstaculo->hitboxcima.height = GetRandomValue(0, diff_atual->dif_max_altura + (diff_atual->altura_anterior));
+	obstaculo->hitboxcima.height = (GetRandomValue(0, diff_atual->dif_max_altura + (diff_atual->altura_anterior)));
 	printf("\naltura atual: %f\ndiferenca: %f", obstaculo->hitboxcima.height, obstaculo->hitboxcima.height - diff_atual->altura_anterior);
+	diff_atual->altura_anterior = obstaculo->hitboxcima.height;
 	if (obstaculo->hitboxcima.height < 0) { obstaculo->hitboxcima.height = 0; printf("erro\n");system("pause"); }
 
 	(diff_atual->altura_anterior) = obstaculo->hitboxcima.height;

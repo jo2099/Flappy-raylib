@@ -4,7 +4,6 @@
 #pragma once
 #include"raylib.h"
 #include"obstaculo.h"
-#define DISTANCIA_OBSTACULOS 400
 #define MAX_OBSTACULOS 30
 
 struct dificuldade {

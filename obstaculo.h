@@ -1,18 +1,15 @@
-#pragma once
-#include<stdio.h>
-#include<stdlib.h>
+
 #ifndef OBSTACULO_H
 #define OBSTACULO_H
 
-#pragma once
 #include"raylib.h"
 #include "dificuldade.h"
 
 #define MAX_OBSTACULOS 30
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 800
-#define HITBOX_WIDTH 50
-#define HITBOX_HEIGHT 50
+#define HITBOX_WIDTH 75
+#define DISTANCIA_OBSTACULOS 300
 
 //#define GAP 150
 //#define VELOCIDADE_OBSTACULOS 5
