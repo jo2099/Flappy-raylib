@@ -1,18 +1,13 @@
-﻿  dificuldade.c
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\dificuldade.c(53,35): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-  jogador.c
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\jogador.c(23,43): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\jogador.c(23,70): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\jogador.c(38,41): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\jogador.c(38,55): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\jogador.c(45,40): warning C4305: '=': truncamento de 'double' para 'float'
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\jogador.c(48,34): warning C4305: '+=': truncamento de 'double' para 'float'
-  main.c
-  obstaculo.c
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\obstaculo.c(14,36): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\obstaculo.c(19,34): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\obstaculo.c(21,53): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\obstaculo.c(24,55): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
-  Gerando Código...
-  LINK : C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\x64\Debug\Flappy_raylib2.exe não encontrado ou não compilado pelo o último link incremental; executando link completo
-  Flappy_raylib2.vcxproj -> C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\x64\Debug\Flappy_raylib2.exe
+﻿  obstaculo.c
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(25,36): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(30,34): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(31,53): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(37,31): warning C4244: 'inicializando': conversão de 'int' para 'float', possível perda de dados
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(45,55): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(51,37): warning C4244: 'inicializando': conversão de 'int' para 'float', possível perda de dados
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(56,66): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(85,60): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(85,85): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(86,62): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c(86,88): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
+  Flappy_raylib2.vcxproj -> C:\Users\fleck\Desktop\Flappy_bird_raylib\x64\Debug\Flappy_raylib2.exe

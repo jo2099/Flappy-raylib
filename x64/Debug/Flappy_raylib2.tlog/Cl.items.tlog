@@ -1,4 +1,5 @@
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\dificuldade.c;C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\x64\Debug\dificuldade.obj
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\jogador.c;C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\x64\Debug\jogador.obj
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\main.c;C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\x64\Debug\main.obj
-C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\obstaculo.c;C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\x64\Debug\obstaculo.obj
+C:\Users\fleck\Desktop\Flappy_bird_raylib\dificuldade.c;C:\Users\fleck\Desktop\Flappy_bird_raylib\x64\Debug\dificuldade.obj
+C:\Users\fleck\Desktop\Flappy_bird_raylib\jogador.c;C:\Users\fleck\Desktop\Flappy_bird_raylib\x64\Debug\jogador.obj
+C:\Users\fleck\Desktop\Flappy_bird_raylib\main.c;C:\Users\fleck\Desktop\Flappy_bird_raylib\x64\Debug\main.obj
+C:\Users\fleck\Desktop\Flappy_bird_raylib\menu.c;C:\Users\fleck\Desktop\Flappy_bird_raylib\x64\Debug\menu.obj
+C:\Users\fleck\Desktop\Flappy_bird_raylib\obstaculo.c;C:\Users\fleck\Desktop\Flappy_bird_raylib\x64\Debug\obstaculo.obj

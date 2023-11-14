@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\fleck\Desktop\codigos genericos\flappy_demo\Flappy_raylib2\x64\Debug\Flappy_raylib2.exe</FullPath>
+      <FullPath>C:\Users\fleck\Desktop\Flappy_bird_raylib\x64\Debug\Flappy_raylib2.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

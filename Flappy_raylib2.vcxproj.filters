@@ -24,6 +24,9 @@
     <ClInclude Include="obstaculo.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jogador.c">
@@ -36,6 +39,9 @@
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="main.c">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.c">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>

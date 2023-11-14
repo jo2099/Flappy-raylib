@@ -10,7 +10,7 @@ void define_diff(struct dificuldade* diff, char string[20])
 	FILE* arq;
 
 	arq = fopen(string, "r");
-
+	
 	if (arq == NULL)
 	{
 		printf("Erro ao abrir arquivo\n");

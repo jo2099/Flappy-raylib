@@ -131,12 +131,17 @@
   <ItemGroup>
     <ClInclude Include="dificuldade.h" />
     <ClInclude Include="jogador.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="obstaculo.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dificuldade.c" />
-    <ClCompile Include="jogador.c" />
+    <ClCompile Include="jogador.c">
+      <LanguageStandard_C Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdc11</LanguageStandard_C>
+      <LanguageStandard_C Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdc11</LanguageStandard_C>
+    </ClCompile>
     <ClCompile Include="main.c" />
+    <ClCompile Include="menu.c" />
     <ClCompile Include="obstaculo.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

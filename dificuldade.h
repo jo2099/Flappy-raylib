@@ -3,8 +3,9 @@
 
 #pragma once
 #include"raylib.h"
-#include"obstaculo.h"
 #define MAX_OBSTACULOS 30
+
+struct obstaculo;
 
 struct dificuldade {
 	int score_treshold;

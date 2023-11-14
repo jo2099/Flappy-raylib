@@ -20,6 +20,9 @@ struct obstaculo
 	float velocidade;
 	Rectangle hitboxbaixo;
 	Rectangle hitboxcima;
+	Texture2D textura_cima;
+	Texture2D textura_baixo;
+	Texture2D fim_obst;
 
 
 };
