@@ -21,7 +21,7 @@ void inicializa_jogador(JOGADOR* jogador)
 	jogador->aceleracao = 0;
 
 	Image image=LoadImage("./flappy.png");
-	ImageResize(&image, jogador->hitbox.width+17, jogador->hitbox.height+17);
+	ImageResizeNN(&image, jogador->hitbox.width+19, jogador->hitbox.height+19);
 
 	//faz a imagem ter o tamanho da hitbox
 

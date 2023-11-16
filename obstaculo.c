@@ -15,10 +15,10 @@ void inicializa_obstaculo(struct obstaculo* obstaculo, struct dificuldade* diff_
 	Texture2D textura;
 	Rectangle source;
 
-	ImageResizeNN(&imagem, HITBOX_WIDTH, (SCREEN_HEIGHT));
+    ImageResizeNN(&imagem, HITBOX_WIDTH, (SCREEN_HEIGHT));
 
 	ImageFlipVertical(&imagem);
-	
+
 	ImageFlipVertical(&imagem_baixo);
 	ImageResizeNN(&imagem_baixo, HITBOX_WIDTH, (SCREEN_HEIGHT));
 
@@ -47,10 +47,10 @@ void inicializa_obstaculo(struct obstaculo* obstaculo, struct dificuldade* diff_
 	obstaculo->hitboxbaixo.y = obstaculo->hitboxcima.height + diff_atual->gap;
 	obstaculo->hitboxbaixo.width = HITBOX_WIDTH;
 	obstaculo->hitboxbaixo.height = SCREEN_HEIGHT - obstaculo->hitboxbaixo.y;
-	
+
 	source=(Rectangle){0,0,imagem_baixo.width,obstaculo->hitboxbaixo.height};
 	ImageCrop(&imagem_baixo,source);
-	//se o y do obstaculo de baixo for maior que a altura da textura, ele aumenta a altura da textura
+//	se o y do obstaculo de baixo for maior que a altura da textura, ele aumenta a altura da textura
 	if (obstaculo->hitboxbaixo.height > imagem_baixo.height)
 	{
 		ImageResize(&imagem_baixo, HITBOX_WIDTH, obstaculo->hitboxbaixo.height);
@@ -59,6 +59,10 @@ void inicializa_obstaculo(struct obstaculo* obstaculo, struct dificuldade* diff_
 
 	//printa pos do obstaculo
 	//printf("obstaculo: %f %f %f %f\n", obstaculo->hitboxcima.x, obstaculo->hitboxcima.y, obstaculo->hitboxbaixo.x, obstaculo->hitboxbaixo.y);
+UnloadImage(imagem);
+UnloadImage(imagem_baixo);
+
+printf("teste\n");
 }
 
 

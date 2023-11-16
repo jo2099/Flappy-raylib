@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1699985873 source:c:\users\fleck\desktop\teste_raylibcb\projeto_teste_raylib\dificuldade.c
+	"dificuldade.h"
+	<stdio.h>
+	<stdlib.h>
+	"obstaculo.h"
+
+1699985577 c:\users\fleck\desktop\teste_raylibcb\projeto_teste_raylib\dificuldade.h
+	"obstaculo.h"
+	"raylib.h"
+
+1699985298 c:\users\fleck\desktop\teste_raylibcb\projeto_teste_raylib\obstaculo.h
+	"raylib.h"
+	"dificuldade.h"
+
+1699982266 source:c:\users\fleck\desktop\teste_raylibcb\projeto_teste_raylib\jogador.c
+	<stdio.h>
+	<stdlib.h>
+	<raylib.h>
+	"Jogador.h"
+
+1699722506 c:\users\fleck\desktop\teste_raylibcb\projeto_teste_raylib\jogador.h
+	<stdio.h>
+	<stdlib.h>
+	"raylib.h"
+	"obstaculo.h"
+
+1699985798 source:c:\users\fleck\desktop\teste_raylibcb\projeto_teste_raylib\main.c
+	<stdio.h>
+	<stdlib.h>
+	<raylib.h>
+	"Jogador.h"
+	"obstaculo.h"
+	"menu.h"
+
+1699740159 c:\users\fleck\desktop\teste_raylibcb\projeto_teste_raylib\menu.h
+	<stdio.h>
+	<stdlib.h>
+	"raylib.h"
+	<string.h>
+	"obstaculo.h"
+
+1699740133 source:c:\users\fleck\desktop\teste_raylibcb\projeto_teste_raylib\menu.c
+	"menu.h"
+
+1699985960 source:c:\users\fleck\desktop\teste_raylibcb\projeto_teste_raylib\obstaculo.c
+	<stdio.h>
+	<stdlib.h>
+	<raylib.h>
+	<time.h>
+	"obstaculo.h"
+	"dificuldade.h"
+	<math.h>
+

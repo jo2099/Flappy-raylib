@@ -10,7 +10,7 @@ void define_diff(struct dificuldade* diff, char string[20])
 	FILE* arq;
 
 	arq = fopen(string, "r");
-	
+
 	if (arq == NULL)
 	{
 		printf("Erro ao abrir arquivo\n");
@@ -39,7 +39,7 @@ void define_diff(struct dificuldade* diff, char string[20])
 
 }
 
-void atualiza_diff(struct dificuldade* diff, int score, struct obstaculo obstaculos[MAX_OBSTACULOS])
+int atualiza_diff(struct dificuldade* diff, int score)
 {
 	if (score > (diff->score_treshold) * (diff->nivel_atual))
 	{
@@ -48,9 +48,7 @@ void atualiza_diff(struct dificuldade* diff, int score, struct obstaculo obstacu
 		diff->gap -= diff->inc_gap;
 		diff->dif_max_altura += diff->inc_dif_max_altura;
 		diff->vel_obstaculos += diff->inc_vel_obstaculos;
-		for (int i = 0;i < diff->num_atual_obstaculos;i++)
-		{
-			obstaculos[i].velocidade = diff->vel_obstaculos;
-		}
+		return 1;
 	}
+	return 0;
 }

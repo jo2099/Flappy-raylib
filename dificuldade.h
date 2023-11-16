@@ -1,11 +1,6 @@
-#ifndef DIFICULDADE_H
-#define DIFUCLDADE_H
-
 #pragma once
+#include "obstaculo.h"
 #include"raylib.h"
-#define MAX_OBSTACULOS 30
-
-struct obstaculo;
 
 struct dificuldade {
 	int score_treshold;
@@ -23,10 +18,9 @@ struct dificuldade {
 
 void define_diff(struct dificuldade* dificuldade, char nome_arq[20]);
 
-void atualiza_diff(struct dificuldade* diff, int score, struct obstaculo obs[MAX_OBSTACULOS] );
+int atualiza_diff(struct dificuldade* diff, int score );
 
 
 
-#endif // !DIFICULDADE_H
 
 

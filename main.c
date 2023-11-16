@@ -5,35 +5,43 @@
 #include "obstaculo.h"
 #include "menu.h"
 
-void processa_jogo(JOGADOR* jogador,struct dificuldade* dificuldade_atual,struct obstaculo obs[MAX_OBSTACULOS],char arquivo[20],int* inicio,int*reinicia)
+void processa_jogo(JOGADOR* jogador,struct dificuldade* dificuldade_atual,OBS obstaculos[MAX_OBSTACULOS],char arquivo[20],int* inicio,int*reinicia)
 {
 	if (IsKeyPressed(KEY_SPACE))
 		(*inicio) = 1;
 	if ((*inicio) == 1)
 	{
 		move_jogador(jogador);
-		atualiza_diff(dificuldade_atual, jogador->score, obs);
+		if(atualiza_diff(dificuldade_atual, jogador->score))
+        {
+
+            for(int i=0;i<dificuldade_atual->num_atual_obstaculos;i++)
+            {
+
+                obstaculos[i].velocidade+=dificuldade_atual->inc_vel_obstaculos;
+            }
+        }
 		jogador->score++;
 
 		for (int i = 0;i < dificuldade_atual->num_atual_obstaculos;i++)
 		{
-			move_obstaculo(&obs[i]);
-			if (CheckCollisionRecs(jogador->hitbox, obs[i].hitboxbaixo) || CheckCollisionRecs(jogador->hitbox, obs[i].hitboxcima))
+			move_obstaculo(&obstaculos[i]);
+			if (CheckCollisionRecs(jogador->hitbox, obstaculos[i].hitboxbaixo) || CheckCollisionRecs(jogador->hitbox, obstaculos[i].hitboxcima))
 			{
 				if (*reinicia == 1)
 				{
 					inicializa_jogador(jogador);
 					(*inicio) = 0;
 					define_diff(dificuldade_atual, arquivo);
-					posiciona_obstaculos(obs, dificuldade_atual);
+					posiciona_obstaculos(obstaculos, dificuldade_atual);
 					WaitTime(1);
 					(*reinicia) = 0;
 				}
 				else (*reinicia) = 1;
-				
+
 			}
-			if (obs[i].hitboxbaixo.x + obs[i].hitboxbaixo.width < 0) //verifica se o obstaculo saiu da tela e o reposiciona na direita
-				inicializa_obstaculo(&obs[i], dificuldade_atual);
+			if (obstaculos[i].hitboxbaixo.x + obstaculos[i].hitboxbaixo.width < 0) //verifica se o obstaculo saiu da tela e o reposiciona na direita
+				inicializa_obstaculo(&obstaculos[i], dificuldade_atual);
 		}
 	}
 }
@@ -56,7 +64,7 @@ int	main()
 	incializa_menu(&menu_principal, 4, botoes_principal, SCREEN_WIDTH / 2 - 50, (SCREEN_HEIGHT / 2) + 20,150, 60);
 	inicializa_jogador(&jogador);
 	define_diff(&dificuldade_atual, arquivo);
-	
+
 	//inicializa os obstaculos separados por uma distancia de 100 pixels
 	posiciona_obstaculos(obstaculos, &dificuldade_atual);
 	SetTargetFPS(60);
@@ -72,7 +80,7 @@ int	main()
 			processa_jogo(&jogador, &dificuldade_atual, obstaculos, arquivo,&inicio,&reinicia);
 
 		}
-		
+
 
 		//desenha o jogo
 		BeginDrawing();
@@ -92,7 +100,7 @@ int	main()
 				DrawText("Pressione espaco para comecar", SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2, 20, RED);
 			}
 			DrawText("score:", 20, 20, 20, RED);DrawText(pontos, 100, 20, 20, RED);
-		}	
+		}
 		EndDrawing();
 
 	}
